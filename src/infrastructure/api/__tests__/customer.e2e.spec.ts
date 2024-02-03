@@ -1,5 +1,6 @@
-import { app, sequelize } from "../express";
-import request from "supertest";
+import request from 'supertest';
+
+import { app, sequelize } from '../express';
 
 describe("E2E test for customer", () => {
   beforeEach(async () => {
@@ -95,8 +96,5 @@ describe("E2E test for customer", () => {
     expect(listResponseXML.text).toContain(`<name>Jane</name>`);
     expect(listResponseXML.text).toContain(`<street>Street 2</street>`);
     expect(listResponseXML.text).toContain(`</customers>`);
-    
-
-    
   });
 });
